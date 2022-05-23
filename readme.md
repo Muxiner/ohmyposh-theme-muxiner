@@ -19,6 +19,13 @@ Oh My Posh 上有很多优秀的 Themes，可以满足不同人对于不同喜�
 
 ![](https://s1.ax1x.com/2022/05/23/XpkMjS.png)
 
+## 尝试主题
+
+执行命令：
+```ps1
+oh-my-posh print primary --config 'https://raw.githubusercontent.com/Muxiner/ohmyposh-theme-muxiner/master/muxiner.omp.json' --shell powershell
+```
+
 ## 使用主题
 
 1. 🦥 下载文件 `muxiner.omp.json`
