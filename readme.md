@@ -1,5 +1,5 @@
 
-![](https://s1.ax1x.com/2022/05/23/XpPvDJ.png)
+![](https://s1.ax1x.com/2022/05/25/XFqApD.png)
 
 # Oh My Posh 自制主题 —— muxiner
 
@@ -17,7 +17,7 @@ Oh My Posh 上有很多优秀的 Themes，可以满足不同人对于不同喜�
 
 ## 主题样式
 
-![](https://s1.ax1x.com/2022/05/23/XpkMjS.png)
+![](https://s1.ax1x.com/2022/05/25/XFbv6J.png)
 
 ## 尝试主题
 
