@@ -1,0 +1,76 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "console_title_template": "{{if .Root}} ⚙️ {{end}}{{.UserName}} \u2794 📁 {{.Folder}}",
+    "final_space": true,
+    "version": 2,
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "foreground": "#c1ff57",
+            "properties": {
+              "display_host": false
+            },
+            "style": "plain",
+            "template": "{{ .UserName }}",
+            
+            "type": "session"
+          },
+          {
+            "foreground": "#ffffff",
+            "style": "plain",
+            "properties": {
+              "folder_icon": " \uf07c ",
+              "folder_separator_icon": " \uf105 ",
+              "max_depth": 1,
+              "style": "agnoster_short"
+            },
+            "template": "  \uf74a   {{ .Path }} ",
+            "type": "path"
+          },
+          {
+            "foreground": "#87b7d9",
+            "style": "plain",
+            "properties": {
+              "branch_icon": "\ue725 ",
+              "fetch_stash_count": true,
+              "fetch_status": true,
+              "fetch_upstream_icon": true,
+              "fetch_worktree_count": true
+            },
+            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+            "type": "git"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "right",
+        "segments": [
+          {
+            "properties": {
+              "always_enabled": true
+            },
+            "style": "plain",
+            "template": " {{ if gt .Code 0 }}<#ff0000>\uf00d </>{{ else }}<#23d18b>\uf00c </>{{ end }} ",
+            "type": "exit"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#ffffff",
+            "style": "plain",
+            "template": "<#ffae88>\uf155</>",
+            "type": "text"
+          }
+        ],
+        "type": "prompt"
+      }
+    ]
+  }
