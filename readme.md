@@ -49,6 +49,8 @@ oh-my-posh print primary --config 'https://raw.githubusercontent.com/Muxiner/ohm
           ```
 5. 🦥 重启终端
 
+大功告成。
+
 ## 参考
 
 [Oh My Posh | Docs](https://ohmyposh.dev/docs)
