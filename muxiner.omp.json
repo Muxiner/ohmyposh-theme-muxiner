@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "console_title_template": "{{if .Root}} ⚙️ {{end}}{{.UserName}} \u2794 📁 {{.Folder}}",
+  "console_title_template": "{{if .Root}}Root {{else}}{{.UserName}} {{end}} \u2794 📁 {{.Folder}}",
   "final_space": true,
   "version": 2,
   "blocks": [
@@ -59,7 +59,7 @@
             "display_host": false
           },
           "style": "plain",
-          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "template": "{{if .Root}}root{{ else }}{{.UserName}}{{end}}@{{ .HostName }} ",
           
           "type": "session"
         },
@@ -107,14 +107,6 @@
       "alignment": "right",
       "segments": [
         {
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "plain",
-          "template": " {{ if gt .Code 0 }}<#ff0000>\uf00d </>{{ else }}<#23d18b>\uf00c </>{{ end }} ",
-          "type": "exit"
-        },
-        {
           "foreground": "#ffffff",
           "template": " \ue000 ",
           "style": "plain", 
@@ -138,15 +130,15 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:red",
+          "foreground": "#ff0000",
           "style": "plain",
-          "template": " \uf992 ",
-          "type": "root"
+          "template": " \uf00d",
+          "type": "exit"
         },
         {
-          "foreground": "#ffffff",
+          "foreground": "#ffae88",
           "style": "plain",
-          "template": "<#ffae88>\uf460</>",
+          "template": " \uf460",
           "type": "text"
         }
       ],
